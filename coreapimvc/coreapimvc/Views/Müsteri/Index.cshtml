@@ -1,0 +1,66 @@
+﻿@model IEnumerable<coreapimvc.Models.Müsteriler>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Müsteri Listesi</h1>
+<br />
+<br />
+<p>
+    <a asp-action="Create">Müsteri Ekle</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.müsteriID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.müsteriAdi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.müsteriSoyadi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.müsteriDogumTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.müsteriCinsiyet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.elemanID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.müsteriID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.müsteriAdi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.müsteriSoyadi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.müsteriDogumTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.müsteriCinsiyet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.elemanID)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.müsteriID }) |
+                
+                    @Html.ActionLink("Delete", "Delete", new {  id=item.müsteriID  })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,56 @@
+﻿@model coreapimvc.Models.Müsteriler
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Sil</h1>
+<br />
+<br />
+<div>
+    <h4>Müsteriler</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.müsteriID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.müsteriID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.müsteriAdi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.müsteriAdi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.müsteriSoyadi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.müsteriSoyadi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.müsteriDogumTarihi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.müsteriDogumTarihi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.müsteriCinsiyet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.müsteriCinsiyet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.elemanID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.elemanID)
+        </dd>
+    </dl>
+    <br />
+    <form asp-action="Delete">
+        <input type="submit" value="Sil" class="btn btn-danger" /> |
+        <a asp-action="Index">Listeye geri dön..</a>
+    </form>
+</div>

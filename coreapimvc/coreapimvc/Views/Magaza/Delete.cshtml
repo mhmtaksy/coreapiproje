@@ -1,0 +1,44 @@
+﻿@model coreapimvc.Models.Magazalar
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Sil</h1>
+<br />
+<br />
+<div>
+    <h4>Magazalar</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.magazaID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.magazaID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.magazaAdi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.magazaAdi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.magazaAdres)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.magazaAdres)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.magazaCalisanSayisi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.magazaCalisanSayisi)
+        </dd>
+    </dl>
+    <br />
+    <form asp-action="Delete">
+        <input type="submit" value="Sil" class="btn btn-danger" /> |
+        <a asp-action="Index">Listeye geri dön..</a>
+    </form>
+</div>

@@ -1,0 +1,60 @@
+﻿@model IEnumerable<coreapimvc.Models.Kiyafetler>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Kiyafet Listesi</h1>
+<br />
+<br />
+<p>
+    <a asp-action="Create">Kiyafet Ekle</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.kiyafetID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.kiyafetAdi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uretimYeri)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uretimTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.magazaID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.kiyafetID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.kiyafetAdi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uretimYeri)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uretimTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.magazaID)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.kiyafetID  }) |
+                
+                @Html.ActionLink("Delete", "Delete", new {  id=item.kiyafetID  })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

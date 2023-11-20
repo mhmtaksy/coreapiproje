@@ -1,0 +1,62 @@
+﻿@model coreapimvc.Models.Müsteriler
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Güncelle</h1>
+<br />
+<br />
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="müsteriID" class="control-label"></label>
+                <input asp-for="müsteriID" class="form-control" />
+                <span asp-validation-for="müsteriID" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="müsteriAdi" class="control-label"></label>
+                <input asp-for="müsteriAdi" class="form-control" />
+                <span asp-validation-for="müsteriAdi" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="müsteriSoyadi" class="control-label"></label>
+                <input asp-for="müsteriSoyadi" class="form-control" />
+                <span asp-validation-for="müsteriSoyadi" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="müsteriDogumTarihi" class="control-label"></label>
+                <input asp-for="müsteriDogumTarihi" class="form-control" />
+                <span asp-validation-for="müsteriDogumTarihi" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="müsteriCinsiyet" /> @Html.DisplayNameFor(model => model.müsteriCinsiyet)
+                </label>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="elemanID" class="control-label"></label>
+                <input asp-for="elemanID" class="form-control" />
+                <span asp-validation-for="elemanID" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Kaydet" class="btn btn-info" />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div>
+    <a asp-action="Index">Listeye geri dön..</a>
+</div>
+
+

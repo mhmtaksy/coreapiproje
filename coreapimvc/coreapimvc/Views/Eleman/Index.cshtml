@@ -1,0 +1,60 @@
+﻿@model IEnumerable<coreapimvc.Models.Elemanlar>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Eleman Listesi</h1>
+<br />
+<br />
+<p>
+    <a asp-action="Create">Ekle</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.elemanID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.elemanAdi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.elemanSoyadi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.elemanCinsiyet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.kiyafetID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.elemanID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.elemanAdi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.elemanSoyadi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.elemanCinsiyet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.kiyafetID)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.elemanID  }) |
+                
+                @Html.ActionLink("Delete", "Delete", new {  id=item.elemanID })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

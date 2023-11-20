@@ -1,0 +1,50 @@
+﻿@model coreapimvc.Models.Kiyafetler
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Sil</h1>
+<br />
+<br />
+<div>
+    <h4>Kiyafetler</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.kiyafetID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.kiyafetID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.kiyafetAdi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.kiyafetAdi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.uretimYeri)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.uretimYeri)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.uretimTarihi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.uretimTarihi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.magazaID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.magazaID)
+        </dd>
+    </dl>
+    <br />
+    <form asp-action="Delete">
+        <input type="submit" value="Sil" class="btn btn-danger" /> |
+        <a asp-action="Index">Listeye geri dön..</a>
+    </form>
+</div>

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<coreapimvc.Models.Magazalar>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Mağaza Listesi</h1>
+<br />
+<br />
+<p>
+    <a asp-action="Create">Mağaza Ekle</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.magazaID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.magazaAdi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.magazaAdres)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.magazaCalisanSayisi)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.magazaID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.magazaAdi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.magazaAdres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.magazaCalisanSayisi)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.magazaID  }) |                
+                @Html.ActionLink("Delete", "Delete", new {  id=item.magazaID  })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
